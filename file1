@@ -1,0 +1,44 @@
+# Generate SSH key
+ssh-keygen -t rsa -b 4096 -C "hosamhamdy258@gmail.com"
+added to github account
+then do global config
+git config --global user.name "Hossam Hamdy"
+git config --global user.email  "hosamhamdy258@gmail.com"
+git config --global init.defaultBranch main
+#create main project Dir
+#create file and add steps
+
+#creating local repo
+git init
+
+#add link for new created repo at github
+git remote add origin git@github.com:hosamhamdy258/git_task.git
+
+#push file to stage step
+# for all files and changes
+git add .
+# for specifc file 
+git add file2
+
+#reset changes on file2 from stage to head and don't discard changes
+git reset HEAD file2
+
+#push file to localrepo after add to stage area again
+git commit -m "to local repo"
+
+#from local repo to stage
+git reset --soft HEAD^
+
+#from local repo to head
+git reset --hard HEAD^
+
+#from stage to head
+git checkout file2
+
+#get clone
+git clone git@github.com:FatmaKhaled/repopythonm.git
+
+#push with my file
+git push origin main
+
+
